@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Navigate, Outlet } from "react-router-dom";
 import { auth } from "../routes/auth";
+import PrivateRoute from "../routes/PrivateRoute";
 
 export default function ProtectedOutlets() {
   if (!auth) {
@@ -8,8 +9,8 @@ export default function ProtectedOutlets() {
   }
   return (
     <div>
-      <Link to="/home" />
-      <Link to="/about" />
+      <PrivateRoute to="/home" />
+      <PrivateRoute to="/about" />
       <Outlet />
     </div>
   );
