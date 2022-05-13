@@ -26,10 +26,6 @@ export default function Login({ props }) {
     username_ref.current.focus();
   }, []);
 
-  console.log(auth);
-  if (auth) {
-    return <Navigate to="/home" />;
-  }
   return (
     <section className="flex flex-col justify-center items-center h-screen">
       <div className="w-full md:w-1/3 m-2 p-5 bg-white shadow-md rounded-md">

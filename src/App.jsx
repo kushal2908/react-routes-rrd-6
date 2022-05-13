@@ -9,17 +9,17 @@ function App() {
     <>
       <main className="bg-base-300 min-h-screen">
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
 
           {/*  
 
           This is protected outlet. Outlet is an COMPONENT for nesting rotes 
 
-          under its parent routes          
+          under its parent route.        
 
           */}
 
-          <Route element={<ProtectedOutlets />}>
+          <Route path="/" element={<ProtectedOutlets />}>
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
           </Route>

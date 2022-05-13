@@ -5,7 +5,7 @@ export default function Layout({ children }) {
   const history = useNavigate();
   const logout = () => {
     localStorage.removeItem("authCredential");
-    history("/login");
+    history("/");
   };
   return (
     <div>
